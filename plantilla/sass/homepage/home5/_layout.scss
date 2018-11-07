@@ -1,0 +1,74 @@
+/*  +----------------------------------------------------+
+        TABLE OF CONTENTS
+    +----------------------------------------------------+
+
+    [1]     BLOCK LAYOUT HOME
+
+*/
+
+/*[1]     BLOCK LAYOUT HOME*/
+
+.common-home{
+	#content 	  { margin-bottom: 30px;}
+	.static-home-2{ margin-top: 30px;   }
+	.so-spotlight2{ margin-top: 20px;   }
+	.so-spotlight3{ margin-top: 30px;   }
+	.so-spotlight4{ margin-top: 22px;   }
+	.module       { margin-bottom: 30px;}
+	.header-bottom{ margin-bottom: 20px;}
+}
+.best-seller .so-extraslider .extraslider-inner .item .item-wrap.style1,
+.best-seller .so-extraslider .extraslider-inner,
+.products-list.list-masonry .product-layout .product-item-container, .products-list.grid .product-layout .product-item-container{ border-color: #ddd;}
+@include breakpoint(lg){
+	#so_category_slider_home2-3.module.container-slider.item-1,
+	.module.block-banner-right{ margin: 0; }
+}
+.module h3.modtitle:before{ z-index: 0; }
+.common-home{
+    @media (min-width: 1200px) {
+        .col-bt-1{width: 25%;}
+        .col-bt-2{width: 37.5%}
+        .col-bt-3{width: 37.5%}
+    }
+    .footer-container{ margin-top: 30px; }
+}
+.layout-home5{
+    .module{margin-bottom: 30px;
+        h3.modtitle{position: relative; border: 1px solid #ddd;  font-size: 100%; padding: 0; margin:0; color: #444;
+            &:before{
+                content: "";  width: 5px; height: 40px;position: relative; display: block; border: none;
+                position: absolute; top: -1px; background: $background; margin-#{$left}: -1px;
+            }
+            > span{display: inline-block; font-size:16px; text-transform: uppercase;position: 
+                relative; line-height: 37px;padding: 0 18px; background: transparent; color: #444;
+                &:before{ display: none; }
+            }
+        }
+    }
+    footer .module h3.modtitle, footer .module h3.footer-title{ border: none; }
+    
+} 
+
+.box_banner{
+    @media (min-width: 1200px) {
+        width: 26.2%;
+        padding-#{$left}: 10px;
+        .banner-right{ margin: 0; }
+    }
+
+    li{margin-bottom: 10px;
+        a{position: relative; display: block;
+            &:before{position: absolute;background: rgba(0,0,0,0.3);width: 0;top: 0;left: 50%;content: ""; transition: all 0.3s ease-in-out 0s;}
+            &:hover{
+                &:before{width: 100%;left: 0;top: 0;height: 100%;}
+            }
+        }
+    }
+}
+.box_slider{
+   @media (min-width: 1200px) {
+        width: 73.8%;
+        padding-#{$right}: 0;
+    }
+}

@@ -1,0 +1,277 @@
+/*******************************************************************************
+******                 SO Framework: Sass ProductList                     ******
+********************************************************************************/
+
+/*============ BOX SALE,NEW ==============*/
+.label-new,.label-sale  { min-width: 45px;  height: 20px; padding: 0 10px; border-radius: 0; line-height: 20px; z-index: 8; font-size: 11px; 
+    color: #fff;  text-align: center;  font-weight: normal; display: block; position: absolute;   text-transform: uppercase;
+}
+     
+.label-sale{background: #e67e22;top: 0; left: 0;
+    &:after{content: "";border-top: 9px solid #e67e22; border-left: 8px solid transparent; position: absolute; bottom: -6px; right: 0;}
+}
+.label-new{background: #00ABF0; top: 0; right: 0;
+    &:after{content: "";border-top: 9px solid #00ABF0; border-right: 8px solid transparent; position: absolute; bottom: -6px; left: 0;}
+}
+.label-percent{padding: 2px 5px; background: $background1; font-size: 13px; font-weight: normal;}
+.product-options{
+    label{padding:0;color: #666;}
+    .label{font-weight: normal;font-size: 11px;}
+    .radio{position: relative;z-index: 2;  text-transform: capitalize; cursor: pointer;
+	.fa{display: none;}
+    }
+   
+    .active .fa{display: block;}
+    .fa{position: absolute;top: 0;z-index: 2;width: 22px;height: 22px; color: white;line-height: 22px;text-align: center; #{$left} : 0;}
+}
+
+/*============ BOX RATE ==============*/
+.rating,
+.ratings{font-size: 13px;margin-bottom: 5px;
+    span.fa-stack{
+        .fa-star-o:before{content: "\f006"; color: #eca330;}
+        .fa-star.fa-stack-1x{ z-index: 1;
+            &:before{content: "\f005";color: #eca330;}
+        }
+    }
+}
+span.fa-stack{width: 14px; height: 14px; line-height: 14px;
+    .fa-star-o:before{content: "\f006"; color: #eca330;}
+    .fa-stack-2x{font-size: 1em;}
+    .fa-star.fa-stack-2x{position: relative; z-index: 1;
+	&:before{content: "\f005";color: #eca330;}
+    }
+    
+}
+.price{
+    margin: 0 0 10px 0;
+    line-height: 24px;
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: 600;
+    .price-old{
+        line-height: 20px;
+        padding: 0 5px;
+        display: inline-block;
+        text-decoration: line-through;
+        color: #999;
+        font-size: 12px;
+        font-weight: normal;
+    }
+    .price-new, span.price{
+        color: #e74c3c;
+        font-size: 18px;
+    }
+}
+
+
+/*-----------Block Sub Category------------------*/
+.refine-search{
+    .thumbnail{margin: 0 0 10px;}
+    a{@include linkGray();}
+}
+
+/*-----------Lastet Products---------------------*/
+.latest-product{
+	.modcontent { border: 1px solid #ddd;
+    padding: 20px; }
+}
+/*====================TODAY'S DEALS ====================*/
+.countdown_box{ 
+    position: absolute;
+    top: 50%;margin-top: -28px;
+    left: 50%;
+    width:170px;
+    @include transition(all 0.3s ease-in-out);
+    @include transform(scale(1) translateX(-50%));
+   
+        .countdown_inner{display: table; background: $gray; width:100%; text-align: center;}
+        .title {border-bottom: 1px solid rgba(255,255,255,0.2); color: #fff;padding: 8px; display: none; }
+        .time-item{display:inline-block;  color: #fff;font-size: 12px;border-#{$right}: 1px solid rgba(255,255,255,0.2); width:25%;
+        .num-time{font-size: 14px;font-weight: 700;background: rgba(255,255,255,0.06)}
+        .num-time,.name-time{padding: 0  10px;}
+        &:last-child{border: none;}
+    }
+}
+/*-----------Block Product Filter----------------*/
+
+h2.title-category{border-bottom:1px solid #e6e6e6;margin:0 0 30px; padding:0 0 10px 0;}
+.filters-panel{;margin-top: 30px; margin-bottom: 15px; padding: 5px 5px 3px; border: 1px solid #ddd;
+	.form-control{ height: 28px; }
+    .list-view{text-align: $left;
+	button.btn{border-radius: 0; padding: 3px 7px; color: #666;
+	    &.active{background: $background1; color: #fff; border-color: $linkColor; box-shadow: none;
+		&:hover{background: $background1; color: #fff;}
+	    }
+	    &:hover{color: $linkColor; background: transparent; border-color: $linkColor;}
+	    &:focus{border-radius: 0; border-color: $linkColor; outline: none;}
+	}
+	.fa{font-size: 14px;}
+    }
+    &.product-filter-bottom{margin-top: 15px;}
+    .box-pagination ul{margin: 0; height: 28px;}
+}
+
+.filters-panel select{border-radius: 0; }
+.box-pagination{line-height: 100%;
+    .pagination > li span, .pagination > li a{ color: #444;padding: 0; width: 28px; height: 28px; line-height: 26px; text-align: center; border-radius: 0; margin-#{$left}: 3px; background: #fff}
+    .pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover,
+    .pagination>.active>a, .pagination>.active>a:focus, 
+    .pagination>.active>a:hover, 
+    .pagination>.active>span, 
+    .pagination>.active>span:focus, 
+    .pagination>.active>span:hover{
+    	background: #fff;
+    	color: $linkColor;
+    	border-color: $background1;
+    }
+}
+.short-by-show .form-group{margin-right: 10px;}
+.mfp-iframe-holder .mfp-close{#{$right}:0;#{$left}:auto;}
+
+
+.products-list {
+    .product-layout {overflow: hidden;
+        .product-item-container{
+            .left-block{
+                .countdown_box .countdown_inner{ background: transparent; box-shadow: none;
+                    .time-item {padding: 1px 0;background: #444;border: none;margin-right: 2px; width: 23.5%;
+                        .num-time {font-size: 14px;color: #fff;margin: 0;border: none;height: 18px;line-height: 20px; font-weight: bold;}
+                        .name-time {font-size: 10px;color: #fff; margin: 0; height: 20px;line-height: 20px; text-transform: uppercase;}
+                    }
+                }
+                .quickview{cursor: pointer; display: block;text-align: center;background: $background;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);color: #777676;font-size: 13px;height: 36px; 
+                    line-height: 36px; left: 50%;margin-top: -16px;margin-left: -16px;
+                    padding:0; position: absolute;top: 50%; width: 36px; border-radius: 0;
+                    &:hover{background-color: darken($background1, 20%); color: #fff; border-color: $linkColor;}
+                }
+                .product-image-container{
+                    @extend .lib-two-img;
+                }   
+            } 
+            .button-group {
+                position: relative;
+                z-index: 9;
+                button{
+                    &.addToCart, &.wishlist, &.compare {float: $left; margin-right: 5px; background-color: #999; border: 1px solid #ddd;
+                        &:hover{background-color: $background; border-color: $background;}
+                    }
+                    &.addToCart{background: #999 url("#{$base-url-theme}icons/icon_cart.png") no-repeat center center;
+                    }
+                    &.wishlist{background: #999 url("#{$base-url-theme}icons/icon_wishlist.png") no-repeat center center;
+                    }
+                    &.compare{background: #999 url("#{$base-url-theme}icons/icon_compare.png")   no-repeat center center; 
+                    }
+                }
+                .quickview{width: 30px; height: 30px;text-indent: -99999px; background: #999  url("#{$base-url-theme}icons/icon_quickview.png") no-repeat center center; }
+            }
+            &:hover{
+                .left-block{
+                    .product-image-container{
+                       @extend .lib-two-img-over;
+                    }
+                }
+                .countdown_box{ 
+                    @include transform(scale(0));
+                }
+            }       
+        }
+    }
+    /*------------------PRODUCT GRID ====================*/ 
+    &.list-masonry .product-layout,
+    &.grid .product-layout{
+        .product-item-container{padding: 15px; margin: 15px 0; position: relative; border: 1px solid #eee; overflow: hidden;
+            iframe{width: 100%}
+            .quickview{opacity: 1; position: absolute; top: 140px; margin: 0; background-color: #999; @include transition(all 0.9s ease-in-out); opacity: 0; #{$right}: 7px; } 
+            .left-block{ position: relative; width: 100%; float: $left;
+                .countdown_box .countdown_inner{ 
+                    .time-item {
+                        background: rgba(0,0,0, 0.7)
+                    }
+                }    
+            } 
+            .right-block{float: left;margin-top: 20px; width: 100%;
+                .caption{padding: 0;
+                    h4 a{font-size: 15px; color: #444; font-weight: normal;}
+                    .ratings{margin: 5px 0 5px 0;}
+                }
+            }
+            .button-group{
+                button{width: 30px; height: 30px; background-color: #999; text-indent: -99999px; background-repeat: no-repeat; background-position: center center; position: absolute; margin-right: 0 !important; border-color: #999;opacity: 0;
+                    &:hover{border-color: $linkColor;}
+                    &.addToCart{top: 35px; @include transition(all 0.3s ease-in-out); #{$right}: 7px; }
+                    &.wishlist{width: 30px; height: 30px; top: 70px; @include transition(all 0.5s ease-in-out); #{$right}: 7px;}
+                    &.compare{width: 30px; height: 30px; top: 105px; @include transition(all 0.7s ease-in-out); #{$right}: 7px;}
+                }
+                .name-cart{ text-transform: uppercase; display: none;}
+            }
+            .label-new{top: 8px; right: 8px;}
+            .label-sale{top: 8px; left: 8px; }
+            &:hover{border: 1px solid #aaa; box-shadow: none;
+                .button-group{
+                    button{opacity: 1;}   
+                }
+                .quickview{ background-color: #999; opacity: 1;
+                    &:hover{background-color: $linkColor;}
+                }
+            }
+        }
+    }
+    /*----------------PRODUCT LIST ------------------*/
+    &.list .product-layout{
+        .product-item-container{ float: left; width: 100%; margin: 15px 0;overflow: hidden;
+            .left-block{border: 1px solid #ddd; padding: 0;
+            .quickview{top: 0; opacity: 0; }
+            .product-image-container, .countdown_box{padding: 10px;}
+            }
+            .countdown_box{width: 100%;
+            }
+            .label-new{top: 10px; #{$right}: 10px;  #{left}: auto;}
+            .label-sale{top: 10px; #{$left}: 10px; #{right}: auto;}
+            .right-block{
+                .caption {padding: 0 10px;
+                    h4{margin-top: 0;}
+                }
+                .description  {padding: 0;}
+                .button-group{margin: 20px 0 0 0; padding: 0 10px;}    
+            }
+            .button-group {
+                display: inline-block;
+                margin: 0 26px;
+                .name-cart{ text-transform: uppercase; display: block;}
+                .quickview{ display: none; }
+            }
+            .button-group button{height: 30px;
+               &.addToCart{background-position: 8px center; font-weight: normal; padding: 0px 15px; color: #fff; border-color: #999;
+                   i{display: none;}
+                   &:hover{border-color: $linkColor;}
+               }
+               @media (min-width: 1200px){
+                   &.addToCart{
+                        padding: 0px 12px 0px 30px;
+                    } 
+                }
+               &.wishlist{width: 30px; text-indent: -99999px; background-repeat: no-repeat; background-position: center center; border-color: #999; float: $right;
+                    &:hover{border-color: $linkColor;}
+               }
+               &.compare{width: 30px; text-indent: -99999px; background-repeat: no-repeat; background-position: center center; border-color: #999;
+                    &:hover{border-color: $linkColor;}
+               } 
+            }
+            &:hover{
+                .left-block{
+                    border-color: #aaa;
+                    .quickview{top: 46%; opacity: 1; z-index: 1; @include transition(all 0.3s ease-in-out 0s); background-color: $background; color: #fff; border-color: $linkColor;
+                     &:hover{background-color: #444; border-color: #444;}
+                   }
+                .countdown_box{transform: scale(0);}
+                    .product-image-container{
+                    &.second_img .img_0{top: 0; opacity: 1; z-index: 0;}
+                    }
+                }
+                .right-block .caption h4 a{color: $linkColor;}
+            }
+        } 
+    }    
+}

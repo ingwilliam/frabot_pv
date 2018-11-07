@@ -1,0 +1,28 @@
+/*******************************************************
+  Style Color
+********************************************************/
+
+$textColor          : #444;
+$textBody           : #666;  
+$FontAwesome		: 'FontAwesome';
+$font-custom		:'Arial';
+$base-text-color	: #ccc;
+$main_border		:#ccc;
+$base-url-theme		:'../image/theme/';
+$font-body			: Roboto, sans-serif ;
+$font-body2			: Poppins, sans-serif ;
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 40.5%) !default; // #666
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+$list-group-border:      #ddd !default;
+
+$brand-primary:         #428bca !default;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;

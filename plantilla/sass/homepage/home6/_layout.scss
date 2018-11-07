@@ -1,0 +1,33 @@
+/*  +----------------------------------------------------+
+        TABLE OF CONTENTS
+    +----------------------------------------------------+
+
+    [1]     BLOCK LAYOUT HOME
+
+*/
+
+/*[1]     BLOCK LAYOUT HOME*/
+
+.common-home{
+	#content      {   margin-bottom: 40px;  }
+	.so-spotlight3,
+	.so-spotlight2{   margin-top: 30px;     }
+	.banner-sn-1  {   margin-top: 30px;     }
+	.module       {   margin-bottom: 30px;  }
+	.header-bottom{   margin-bottom: 30px; }
+	#so_category_slider_home2-3{ margin-bottom: 0; }
+}
+.layout-home6{
+    .module{margin-bottom: 30px;
+        h3.modtitle{position: relative; border: 1px solid #ddd;  font-size: 100%; padding: 0; margin:0; font-weight: bold; border-bottom: 3px solid #ddd; 
+            &:before{ display: none; }
+            span{display: inline-block; font-size:16px; text-transform: uppercase;position: 
+                relative; line-height: 37px;padding: 0 18px; background: transparent; color: #444;
+                &:before{ display: none; }
+                .first { padding: 0; color: $linkColor; }
+            }
+        }
+        &.item-3{ margin: 0; }
+    }
+    footer .module h3.modtitle, footer .module h3.footer-title{ border: none; }
+} 
